@@ -1,0 +1,30 @@
+Create New ->
+
+Authentication Options
+Build -> Authentication -> signin method - email pass- enable
+
+
+Database
+Build -> firestore database - Data - create - production mode- us central - done
+Build -> firestore database - rules - (for production) write: if request.auth!= null; - publish
+
+
+Adding Project
+Project Overview -> android - fill details - download google service.json -drag generated file to app folder and rename extra added name - for project level go  to android - build.gradle- paste class path - for app level go to android - app - build.gradle - add line which shown in doc - add implementation platform line -save
+
+Additionally -
+Aap -build.gradle - minSdkVersion 21 &  multiDexEnabled true
+
+Save
+
+Add SHA-256 key
+
+Done
+
+Same for IOS and WEB
+
+
+Generating SHA-1
+Install required (java JDK, android sdk command line tool)
+Via Android Studio
+Android  - gradlew(open with terminal) - gradlew signingReport (command enter)
